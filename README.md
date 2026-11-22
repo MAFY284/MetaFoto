@@ -9,12 +9,22 @@ Visor y analizador de metadatos de fotos para Android, centrado en la privacidad
 ## Funciones
 
 - Lectura completa de **EXIF, GPS, IPTC, XMP, ICC** y otras etiquetas disponibles.
-- **Mapa interactivo** OpenStreetMap cuando la foto incluye coordenadas.
+- **Mapa interactivo** CARTO Voyager cuando la foto incluye coordenadas (fallback a OpenStreetMap si no hay API key).
 - Soporte de imágenes **JPG, HEIC, PNG, TIFF y WebP**.
 - Entrada desde **galería, archivos o cámara** del sistema.
 - Interfaz Jetpack Compose con temas **claro, oscuro y sistema**.
 - Solo se pide acceso a la foto seleccionada; también se puede leer la ubicación incluida en la imagen con el permiso de Android correspondiente.
 - Sin publicidad, compras ni rastreo.
+
+## API key de CARTO (opcional)
+
+El APK publicado no incluye ninguna API key. Sin clave, el mapa usa OpenStreetMap. Si tienes una clave de CARTO, puedes introducirla desde el botón de ajustes del mapa; se guarda solo en las preferencias privadas del dispositivo y se usa con las teselas de CARTO Voyager.
+
+Para compilar una variante local que incluya una clave predeterminada sin publicarla, crea un `carto.properties` (ignorado por Git) en la raíz:
+
+```properties
+apiKey=TU_API_KEY
+```
 
 ## Compilar
 

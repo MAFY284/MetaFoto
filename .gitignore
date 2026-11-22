@@ -12,3 +12,4 @@
 /app/build/
 .kotlin/
 *.apk
+carto.properties

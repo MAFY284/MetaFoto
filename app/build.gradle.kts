@@ -10,6 +10,14 @@ val keystoreProperties = Properties().apply {
 }
 val hasReleaseKeystore = keystorePropertiesFile.exists()
 
+val cartoPropertiesFile = rootProject.file("carto.properties")
+val cartoProperties = Properties().apply {
+    if (cartoPropertiesFile.exists()) {
+        FileInputStream(cartoPropertiesFile).use { load(it) }
+    }
+}
+val cartoApiKey = cartoProperties.getProperty("apiKey", "").trim()
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -26,6 +34,8 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0.0"
+
+        buildConfigField("String", "CARTO_API_KEY", "\"${cartoApiKey.replace("\\", "\\\\").replace("\"", "\\\"")}\"")
 
         vectorDrawables {
             useSupportLibrary = true

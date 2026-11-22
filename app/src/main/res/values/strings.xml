@@ -19,12 +19,12 @@
     <string name="privacy_local">100 % local</string>
     <string name="privacy_no_ads">Sin anuncios</string>
     <string name="privacy_no_tracking">Sin rastreo</string>
-    <string name="home_privacy_note">La app no tiene servidores propios, cuentas, telemetría ni compras. Solo el mapa descarga teselas de OpenStreetMap cuando hay conexión.</string>
+    <string name="home_privacy_note">La app no tiene servidores propios, cuentas, telemetría ni compras. Solo el mapa descarga teselas de OpenStreetMap/CARTO cuando hay conexión.</string>
     <string name="home_features_title">Todo lo que hay detrás de una foto</string>
     <string name="feature_metadata_title">Metadatos completos</string>
     <string name="feature_metadata_description">EXIF, GPS, IPTC, XMP, ICC y cada etiqueta disponible.</string>
     <string name="feature_map_title">Mapa interactivo</string>
-    <string name="feature_map_description">Ubica la foto en OpenStreetMap cuando incluye coordenadas.</string>
+    <string name="feature_map_description">Ubica la foto en el mapa CARTO cuando incluye coordenadas.</string>
     <string name="feature_privacy_title">Privacidad real</string>
     <string name="feature_privacy_description">Sin cuentas, anuncios, telemetría ni servidores propios.</string>
     <string name="theme">Tema</string>
@@ -85,10 +85,18 @@
     <string name="map_waze">Waze</string>
     <string name="map_osm">OpenStreetMap</string>
     <string name="map_attribution">© colaboradores de OpenStreetMap</string>
-    <string name="map_online_note">El mapa descarga teselas de OpenStreetMap. El análisis de metadatos es 100 % local.</string>
+    <string name="map_attribution_carto">© OpenStreetMap · © CARTO</string>
+    <string name="map_online_note">El mapa descarga teselas de CARTO/OpenStreetMap. El análisis de metadatos es 100 % local.</string>
     <string name="map_zoom_in">Acercar mapa</string>
     <string name="map_zoom_out">Alejar mapa</string>
     <string name="map_center">Centrar en la ubicación</string>
+    <string name="map_key_configure">Configurar CARTO</string>
+    <string name="map_key_title">API key de CARTO (opcional)</string>
+    <string name="map_key_message">Sin clave se usa OpenStreetMap. Si introduces una API key de CARTO, el mapa usará CARTO y la clave se guardará únicamente en este dispositivo.</string>
+    <string name="map_key_hint">Pega tu API key</string>
+    <string name="map_key_save">Guardar</string>
+    <string name="map_key_clear">Quitar</string>
+    <string name="map_key_cancel">Cancelar</string>
 
     <!-- Fecha -->
     <string name="date_capture">Fecha de captura</string>
