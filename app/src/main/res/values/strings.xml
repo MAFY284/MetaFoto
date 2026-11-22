@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MetaFoto</string>
+    <string name="app_tagline">Descubre lo que esconde tu foto</string>
+
+    <!-- Inicio -->
+    <string name="home_title">Tus fotos, sin secretos</string>
+    <string name="home_description">Analiza EXIF, GPS, IPTC y XMP directamente en tu dispositivo. Nada sale de tu teléfono.</string>
+    <string name="select_photo">Seleccionar foto</string>
+    <string name="select_photo_hint">JPG · HEIC · PNG · TIFF · WebP</string>
+    <string name="location_permission_title">Ubicación de la foto</string>
+    <string name="location_permission_message">Para mostrar las coordenadas GPS, Android necesita permiso para acceder a la ubicación incluida en la foto. MetaFoto solo lee la imagen que elijas; no puede ver el resto de tu galería.</string>
+    <string name="location_permission_allow">Permitir ubicación</string>
+    <string name="location_permission_skip">Ahora no</string>
+    <string name="location_permission_denied">GPS oculto por Android: sin permiso de ubicación de fotos.</string>
+    <string name="source_gallery">Galería</string>
+    <string name="source_files">Archivos</string>
+    <string name="source_camera">Cámara</string>
+    <string name="privacy_local">100 % local</string>
+    <string name="privacy_no_ads">Sin anuncios</string>
+    <string name="privacy_no_tracking">Sin rastreo</string>
+    <string name="home_privacy_note">La app no tiene servidores propios, cuentas, telemetría ni compras. Solo el mapa descarga teselas de OpenStreetMap cuando hay conexión.</string>
+    <string name="home_features_title">Todo lo que hay detrás de una foto</string>
+    <string name="feature_metadata_title">Metadatos completos</string>
+    <string name="feature_metadata_description">EXIF, GPS, IPTC, XMP, ICC y cada etiqueta disponible.</string>
+    <string name="feature_map_title">Mapa interactivo</string>
+    <string name="feature_map_description">Ubica la foto en OpenStreetMap cuando incluye coordenadas.</string>
+    <string name="feature_privacy_title">Privacidad real</string>
+    <string name="feature_privacy_description">Sin cuentas, anuncios, telemetría ni servidores propios.</string>
+    <string name="theme">Tema</string>
+    <string name="theme_system">Seguir sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="theme_dialog_title">Apariencia</string>
+    <string name="close">Cerrar</string>
+
+    <!-- Estados -->
+    <string name="analyzing_title">Analizando metadatos</string>
+    <string name="analyzing_message">Leyendo EXIF, GPS, IPTC y XMP…</string>
+    <string name="error_title">No se pudo analizar la foto</string>
+    <string name="error_generic">Ocurrió un error inesperado al leer el archivo.</string>
+    <string name="retry">Reintentar</string>
+    <string name="choose_another">Elegir otra foto</string>
+    <string name="back">Volver</string>
+
+    <!-- Resultado -->
+    <string name="result_title">Metadatos</string>
+    <string name="photo_preview">Vista previa de la foto</string>
+    <string name="no_preview">No se pudo crear la vista previa</string>
+    <string name="share">Compartir</string>
+    <string name="share_summary">Compartir resumen</string>
+    <string name="copy_all">Copiar todo</string>
+    <string name="copied">Metadatos copiados al portapapeles</string>
+    <string name="copy_error">No se pudieron copiar los metadatos</string>
+    <string name="share_error">No hay ninguna app disponible para compartir</string>
+    <string name="map_error">No hay ninguna app de mapas disponible</string>
+    <string name="share_chooser_title">Compartir metadatos con…</string>
+    <string name="no_metadata_title">Sin metadatos incrustados</string>
+    <string name="no_metadata_message">La imagen se abrió correctamente, pero no contiene datos EXIF, IPTC o XMP. Abajo se muestra la información disponible del archivo.</string>
+    <string name="warnings_title">Avisos de lectura</string>
+
+    <!-- Secciones -->
+    <string name="section_location">Ubicación</string>
+    <string name="section_date">Fecha y hora</string>
+    <string name="section_camera">Dispositivo y cámara</string>
+    <string name="section_technical">Parámetros técnicos</string>
+    <string name="section_file">Archivo</string>
+    <string name="section_other">Otros metadatos</string>
+    <string name="section_all">Metadatos completos</string>
+
+    <!-- Ubicación -->
+    <string name="no_location">Esta foto no contiene información de ubicación</string>
+    <string name="no_location_detail">La imagen no incluye coordenadas GPS. Es habitual al compartir fotos por redes sociales o al desactivar la ubicación en la cámara.</string>
+    <string name="latitude">Latitud</string>
+    <string name="longitude">Longitud</string>
+    <string name="altitude">Altitud</string>
+    <string name="gps_date">Fecha GPS</string>
+    <string name="gps_direction">Dirección de la imagen</string>
+    <string name="map_datum">Datum del mapa</string>
+    <string name="copy_coordinates">Copiar coordenadas</string>
+    <string name="coordinates_copied">Coordenadas copiadas</string>
+    <string name="open_in">Abrir en…</string>
+    <string name="map_google">Google Maps</string>
+    <string name="map_apple">Apple Maps</string>
+    <string name="map_waze">Waze</string>
+    <string name="map_osm">OpenStreetMap</string>
+    <string name="map_attribution">© colaboradores de OpenStreetMap</string>
+    <string name="map_online_note">El mapa descarga teselas de OpenStreetMap. El análisis de metadatos es 100 % local.</string>
+    <string name="map_zoom_in">Acercar mapa</string>
+    <string name="map_zoom_out">Alejar mapa</string>
+    <string name="map_center">Centrar en la ubicación</string>
+
+    <!-- Fecha -->
+    <string name="date_capture">Fecha de captura</string>
+    <string name="date_weekday">Día de la semana</string>
+    <string name="date_time">Hora</string>
+    <string name="date_timezone">Zona horaria</string>
+    <string name="date_source">Origen</string>
+    <string name="date_original_raw">Fecha original (EXIF)</string>
+    <string name="date_digitized">Digitalizada</string>
+    <string name="date_modified">Modificada (EXIF)</string>
+    <string name="date_unknown">No se encontró una fecha de captura en los metadatos</string>
+    <string name="date_timezone_unknown">No indicada; se usa la zona del dispositivo</string>
+    <string name="date_timezone_device">Zona del dispositivo (no indicada en EXIF)</string>
+
+    <!-- Cámara / técnica / archivo -->
+    <string name="camera_make">Marca</string>
+    <string name="camera_model">Modelo</string>
+    <string name="camera_lens">Lente</string>
+    <string name="camera_lens_spec">Especificación de la lente</string>
+    <string name="camera_lens_make">Marca de la lente</string>
+    <string name="camera_software">Software</string>
+    <string name="camera_serial">Número de serie</string>
+    <string name="camera_owner">Propietario</string>
+    <string name="camera_no_info">No se encontró información del dispositivo</string>
+    <string name="technical_iso">ISO</string>
+    <string name="technical_aperture">Apertura</string>
+    <string name="technical_shutter">Obturación</string>
+    <string name="technical_focal">Distancia focal</string>
+    <string name="technical_focal_35mm">Equivalente 35 mm</string>
+    <string name="technical_flash">Flash</string>
+    <string name="technical_white_balance">Balance de blancos</string>
+    <string name="technical_orientation">Orientación</string>
+    <string name="technical_resolution">Resolución original</string>
+    <string name="technical_compression">Compresión</string>
+    <string name="technical_exposure_program">Programa de exposición</string>
+    <string name="technical_exposure_bias">Compensación de exposición</string>
+    <string name="technical_metering">Medición</string>
+    <string name="technical_color_space">Espacio de color</string>
+    <string name="technical_digital_zoom">Zoom digital</string>
+    <string name="technical_scene">Tipo de escena</string>
+    <string name="technical_contrast">Contraste</string>
+    <string name="technical_saturation">Saturación</string>
+    <string name="technical_sharpness">Nitidez</string>
+    <string name="technical_no_info">No hay parámetros técnicos disponibles</string>
+    <string name="file_name">Nombre</string>
+    <string name="file_type">Tipo MIME</string>
+    <string name="file_size">Tamaño</string>
+    <string name="file_dimensions">Dimensiones</string>
+    <string name="file_modified">Última modificación</string>
+    <string name="file_path">Ruta / identificador</string>
+    <string name="file_uri">URI</string>
+    <string name="other_title">Título</string>
+    <string name="other_description">Descripción</string>
+    <string name="other_author">Autor</string>
+    <string name="other_copyright">Copyright</string>
+    <string name="other_keywords">Palabras clave</string>
+    <string name="other_city">Ciudad</string>
+    <string name="other_location">Ubicación descrita</string>
+    <string name="other_province">Provincia / estado</string>
+    <string name="other_country">País</string>
+    <string name="other_credit">Crédito</string>
+    <string name="other_headline">Titular</string>
+    <string name="other_instructions">Instrucciones</string>
+    <string name="other_no_info">No se encontraron datos descriptivos, de autoría o derechos</string>
+
+    <!-- Metadatos completos -->
+    <string name="all_metadata_count">%1$d datos en %2$d grupos</string>
+    <string name="all_metadata_description">Explora todos los grupos EXIF, GPS, IPTC, XMP y de formato detectados, incluidos los que no aparecen en las tarjetas anteriores.</string>
+    <string name="all_metadata_open">Explorar todos los metadatos</string>
+    <string name="all_metadata_search">Buscar etiqueta o valor…</string>
+    <string name="all_metadata_empty">No hay metadatos incrustados que mostrar.</string>
+    <string name="all_metadata_no_results">No hay resultados para tu búsqueda.</string>
+    <string name="all_metadata_tags">%1$d etiquetas</string>
+    <string name="tag_count">%1$d etiquetas</string>
+    <string name="clear_search">Borrar búsqueda</string>
+    <string name="expand">Expandir</string>
+    <string name="collapse">Contraer</string>
+
+    <string name="no_metadata_short">Sin metadatos</string>
+    <string name="unknown">Desconocido</string>
+    <string name="not_available">No disponible</string>
+    <string name="generated_by">Generado localmente con MetaFoto</string>
+    <string name="privacy_footer">Sin anuncios · Sin cuentas · Sin telemetría</string>
+    <string name="camera_permission_help">No se pudo abrir la cámara del sistema.</string>
+</resources>
