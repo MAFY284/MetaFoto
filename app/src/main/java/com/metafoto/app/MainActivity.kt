@@ -121,6 +121,7 @@ private fun AppContent(
             onBack = onBack,
             onChooseAnother = onChooseAnother,
             onThemeClick = onThemeClick,
+            onRetry = onRetry,
         )
 
         is MainUiState.Error -> ErrorScreen(

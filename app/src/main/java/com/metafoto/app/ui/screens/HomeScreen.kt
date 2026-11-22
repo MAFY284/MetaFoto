@@ -1,8 +1,6 @@
 package com.metafoto.app.ui.screens
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -37,7 +35,6 @@ import androidx.compose.material.icons.outlined.PhotoCamera
 import androidx.compose.material.icons.outlined.PhotoLibrary
 import androidx.compose.material.icons.outlined.Security
 import androidx.compose.material.icons.outlined.Tune
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -50,7 +47,6 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -58,7 +54,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -72,7 +67,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.core.content.ContextCompat
 import com.metafoto.app.R
 import com.metafoto.app.utils.CameraOutput
 import kotlinx.coroutines.launch
@@ -87,7 +81,6 @@ fun HomeScreen(
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
     var pendingCameraUri by remember { mutableStateOf<Uri?>(null) }
-    var showLocationRationale by rememberSaveable { mutableStateOf(false) }
 
     val galleryLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent(),
@@ -97,19 +90,6 @@ fun HomeScreen(
 
     fun launchGallery() {
         galleryLauncher.launch("image/*")
-    }
-
-    val locationPermissionLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.RequestPermission(),
-    ) { granted ->
-        if (!granted) {
-            scope.launch {
-                snackbarHostState.showSnackbar(
-                    context.getString(R.string.location_permission_denied),
-                )
-            }
-        }
-        launchGallery()
     }
 
     val filesLauncher = rememberLauncherForActivityResult(
@@ -135,15 +115,7 @@ fun HomeScreen(
     }
 
     fun openGallery() {
-        val hasLocationPermission = ContextCompat.checkSelfPermission(
-            context,
-            Manifest.permission.ACCESS_MEDIA_LOCATION,
-        ) == PackageManager.PERMISSION_GRANTED
-        if (hasLocationPermission) {
-            launchGallery()
-        } else {
-            showLocationRationale = true
-        }
+        launchGallery()
     }
 
     fun openFiles() {
@@ -243,33 +215,7 @@ fun HomeScreen(
         }
     }
 
-    if (showLocationRationale) {
-        AlertDialog(
-            onDismissRequest = { showLocationRationale = false },
-            title = { Text(stringResource(R.string.location_permission_title)) },
-            text = { Text(stringResource(R.string.location_permission_message)) },
-            confirmButton = {
-                TextButton(
-                    onClick = {
-                        showLocationRationale = false
-                        locationPermissionLauncher.launch(Manifest.permission.ACCESS_MEDIA_LOCATION)
-                    },
-                ) {
-                    Text(stringResource(R.string.location_permission_allow))
-                }
-            },
-            dismissButton = {
-                TextButton(
-                    onClick = {
-                        showLocationRationale = false
-                        launchGallery()
-                    },
-                ) {
-                    Text(stringResource(R.string.location_permission_skip))
-                }
-            },
-        )
-    }
+
 }
 
 @Composable

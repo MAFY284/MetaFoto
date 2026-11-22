@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.Fullscreen
 import androidx.compose.material.icons.outlined.MyLocation
 import androidx.compose.material.icons.outlined.Remove
 import androidx.compose.material.icons.outlined.Settings
@@ -60,6 +61,7 @@ fun PhotoMap(
     latitude: Double,
     longitude: Double,
     modifier: Modifier = Modifier,
+    onExpand: (() -> Unit)? = null,
 ) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -95,6 +97,29 @@ fun PhotoMap(
             },
             modifier = Modifier.fillMaxSize(),
         )
+
+        if (onExpand != null) {
+            Surface(
+                modifier = Modifier
+                    .align(Alignment.TopStart)
+                    .padding(10.dp),
+                shape = RoundedCornerShape(12.dp),
+                color = MaterialTheme.colorScheme.surface.copy(alpha = 0.94f),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.7f)),
+                shadowElevation = 3.dp,
+            ) {
+                IconButton(
+                    onClick = onExpand,
+                    modifier = Modifier.size(40.dp),
+                ) {
+                    Icon(
+                        imageVector = Icons.Outlined.Fullscreen,
+                        contentDescription = stringResource(R.string.map_expand),
+                        modifier = Modifier.size(20.dp),
+                    )
+                }
+            }
+        }
 
         Surface(
             modifier = Modifier

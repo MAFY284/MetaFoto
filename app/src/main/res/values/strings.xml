@@ -13,6 +13,9 @@
     <string name="location_permission_allow">Permitir ubicación</string>
     <string name="location_permission_skip">Ahora no</string>
     <string name="location_permission_denied">GPS oculto por Android: sin permiso de ubicación de fotos.</string>
+    <string name="location_permission_gps_title">Activar GPS de la foto</string>
+    <string name="location_permission_gps_message">Android puede ocultar las coordenadas GPS hasta que concedas el permiso de ubicación de fotos. Elige «Permitir todo». MetaFoto solo lee la imagen que elijas.</string>
+    <string name="location_permission_enable">Permitir ubicación</string>
     <string name="source_gallery">Galería</string>
     <string name="source_files">Archivos</string>
     <string name="source_camera">Cámara</string>
@@ -90,6 +93,9 @@
     <string name="map_zoom_in">Acercar mapa</string>
     <string name="map_zoom_out">Alejar mapa</string>
     <string name="map_center">Centrar en la ubicación</string>
+    <string name="map_expand">Ver mapa a pantalla completa</string>
+    <string name="map_close">Cerrar mapa</string>
+    <string name="map_fullscreen_title">Ubicación de la foto</string>
     <string name="map_key_configure">Configurar CARTO</string>
     <string name="map_key_title">API key de CARTO (opcional)</string>
     <string name="map_key_message">Sin clave se usa OpenStreetMap. Si introduces una API key de CARTO, el mapa usará CARTO y la clave se guardará únicamente en este dispositivo.</string>

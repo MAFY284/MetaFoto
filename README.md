@@ -4,12 +4,13 @@ Visor y analizador de metadatos de fotos para Android, centrado en la privacidad
 
 ## Descargar APK
 
-[**MetaFoto-1.0.0.apk**](https://github.com/MAFY284/MetaFoto/releases/latest) — APK firmado para Android 8.0+.
+[**MetaFoto-1.0.1.apk**](https://github.com/MAFY284/MetaFoto/releases/latest) — APK firmado para Android 8.0+.
 
 ## Funciones
 
 - Lectura completa de **EXIF, GPS, IPTC, XMP, ICC** y otras etiquetas disponibles.
 - **Mapa interactivo** CARTO Voyager cuando la foto incluye coordenadas (fallback a OpenStreetMap si no hay API key).
+- **Mapa a pantalla completa** con un toque en el icono de expandir.
 - Soporte de imágenes **JPG, HEIC, PNG, TIFF y WebP**.
 - Entrada desde **galería, archivos o cámara** del sistema.
 - Interfaz Jetpack Compose con temas **claro, oscuro y sistema**.
